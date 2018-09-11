@@ -1,0 +1,73 @@
+.dropdown
+  &__block
+    background: rgba(0, 0, 0, .2)
+    border: none
+    display: flex
+    flex-direction: column
+    position: relative
+    height: 75px
+    justify-content: space-between
+    color: #fff
+    font-size: 14px
+    padding: 8px 16px 14px
+    outline: none
+    cursor: pointer
+    transition: .2s ease-in-out
+    &:hover
+      background: lighten(rgba(0, 0, 0, .2), 15%)
+    &:after
+      position: absolute
+      bottom: 27px
+      right: 19px
+      content: ''
+      display: block
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 4px 4px 0 4px
+      border-color: #ffffff transparent transparent transparent
+
+  &__title
+    opacity: .5
+    white-space: nowrap
+
+  &__rate
+    position: relative
+    margin: 0 0 0 18px
+    &:before
+      position: absolute
+      content: ''
+      top: 3px
+      left: -6px
+      transform: translate(-100%, 0)
+      display: block
+      height: 12px
+      width: 12px
+      background: url("../img/bit.jpg")
+      background-size: cover
+      background-position: center center
+      background-repeat: no-repeat
+
+  &__btn
+    position: relative
+
+  &__menu
+    display: none
+    position: absolute
+    bottom: -3px
+    padding: 10px 20px
+    background: #fff
+    transform: translate(0, 100%)
+    right: 0
+    border: 1px solid $accent
+    border-radius: 4px
+    color: #000
+    z-index: 150
+
+  &__link
+    white-space: nowrap
+    text-decoration: none
+    color: #000
+    transition: .2s ease-in-out
+    &:hover
+      color: $accent

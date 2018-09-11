@@ -1,0 +1,174 @@
+.btn
+  padding: 0
+  position: relative
+  border: none
+  outline: none
+  background: transparent
+  cursor: pointer
+  font-family: 'Roboto', sans-serif
+  white-space: nowrap
+
+  &__icon
+    font-size: 0
+    svg
+      path
+        transition: .2s ease-in-out
+
+  &_lang
+    color: #fff
+    font-size: 16px
+    margin: 0 0 0 66px
+    position: relative
+    transition: .2s ease-in-out
+    &:hover
+      color: darken(#fff, 15%)
+    &:before
+      position: absolute
+      top: 0
+      left: -8px
+      transform: translate(-100%, 0)
+      content: ''
+      display: block
+      width: 26px
+      height: 26px
+      border-radius: 50%
+
+  &_ru
+    &:before
+      background: linear-gradient(-180deg, #fff 33.3%, #073DA3 33.3%, #073DA3 66.6%, #E70000 66.6%)
+
+  &__notifier
+    position: absolute
+    top: -7px
+    right: -7px
+    display: inline-block
+    width: 16px
+    height: 16px
+    color: #fff
+    line-height: 17px
+    margin: 0
+    border-radius: 50%
+    text-align: center
+    background: $accent
+
+  &_download
+    padding: 0 36px
+    display: inline-block
+    line-height: 45px
+    height: 45px
+    border: 1px solid $accent
+    border-radius: 40px
+    font-size: 16px
+    color: $accent
+    transition: .2s ease-in-out
+    &:hover
+      color: #fff
+      background: $accent
+      svg
+        path
+          fill: #fff
+
+    .btn__icon
+      margin: 0 8px 0 0
+
+  &_dropdown
+    display: flex
+    align-items: center
+    width: 128px
+    padding: 0 0 0 12px
+    height: 44px
+    border: 1px solid #A0A0A0
+    text-align: left
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    border-bottom: none
+    position: relative
+    color: #A0A0A0
+    font-size: 14px
+    transition: .2s ease-in-out
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: -2px
+      right: -2px
+      display: block
+      height: 1px
+      background: #A0A0A0
+    &:before
+      position: absolute
+      top: 50%
+      right: 13%
+      transform: translate(0, -50%)
+      content: ''
+      display: block
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 4px 4px 0 4px
+      border-color: #A0A0A0 transparent transparent transparent
+      transition: .2s ease-in-out
+    &:hover
+      color: darken(#A0A0A0, 15%)
+      &:before
+        border-color: darken(#A0A0A0, 15%) transparent transparent transparent
+
+    &-square
+      width: 21px
+      height: 21px
+      background: #ececec
+      margin: 0 8px 0 0
+
+    & + .btn_dropdown
+      margin: 0 0 0 27px
+
+  &_filter
+    display: flex
+    align-items: center
+    font-size: 14px
+    position: relative
+    margin: 0 0 36px 0
+    padding: 0 12px 0 0
+    &:after
+      position: absolute
+      top: 50%
+      right: 0
+      content: ''
+      display: block
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 4px 4px 0 4px
+      border-color: #000 transparent transparent transparent
+
+    .btn__icon
+      margin: 0 8px 0 0
+
+  &_no-fees
+    font-size: 12px
+    text-decoration: none
+    color: #BFBFBF
+    float: right
+    margin: 0 70px 0 0
+    i
+      margin: 0 0 0 3px
+
+  &_cta
+    width: 100%
+    height: 53px
+    line-height: 53px
+    border-radius: 40px
+    font-size: 24px
+    margin: 48px 0 0 0
+
+  &_primary
+    background: $accent
+    color: #fff
+    transition: .2s ease-in-out
+    &:hover
+      background: lighten($accent, 10%)
+    &:focus
+      border: 1px solid #191A39
+
+  &_burger
+    display: none
